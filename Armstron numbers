@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class Armstrong {
+
+    public static void main(String[] args){
+        
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter the number:");
+        int number = input.nextInt();
+        int temp = number;
+        // 1634 -> 163 -> 16 -> 1 -> 0
+        
+        int digit_count = 0;
+        while(number > 0){
+            digit_count++;
+            number /= 10;
+        }
+        
+        number = temp;
+        
+        // 1634 -> 163 -> 16 -> 1 -> 0
+        double sum = 0;
+        while(number > 0){
+           sum += Math.pow(number % 10, digit_count);
+           number /= 10;
+        }
+        
+        if(sum == temp)
+            System.out.println("Armstrong number");
+        else
+            System.out.println("is not Armstrong number");
+    }
+}
+
+    
+
