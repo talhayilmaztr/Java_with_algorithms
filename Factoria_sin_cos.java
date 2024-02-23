@@ -1,4 +1,4 @@
-public class Factorial {
+public class Factoria_sin_cos {
 
     public static int factorial(int number) {
         int result = 1;
