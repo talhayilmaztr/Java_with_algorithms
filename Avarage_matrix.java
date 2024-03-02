@@ -19,6 +19,15 @@ public class Avarage_matrix {
             System.out.println(d);
         }
     }
+    public static int lower_triangular_matrix(int[][] matrix){
+        int sum = 0;
+        for (int row = 0; row < matrix.length; row++) {
+            for (int col = 0; col < row; col++){
+                sum += matrix[row][col]; 
+            }
+        }
+        return sum;
+    }
     public static void main(String[] args) {
         
         int[][] matrix = {
@@ -28,5 +37,6 @@ public class Avarage_matrix {
                          };
         
         averagebyColumns(matrix);
+        System.out.println(lower_triangular_matrix(matrix));
     }
 }
